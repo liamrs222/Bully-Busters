@@ -1,0 +1,20 @@
+{
+    "name": "Bully Busters",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Detects cyber-bullying on social media",
+
+    "permissions": ["tabs"],
+    "host_permissions": ["https://twitter.com/*"],
+
+    "icons": {
+        "64": "images/icon64.png",
+        "128": "images/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "64": "images/icon64.png",
+            "128": "images/icon128.png"
+        }
+    }
+}
