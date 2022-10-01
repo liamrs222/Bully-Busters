@@ -4,8 +4,8 @@
     "manifest_version": 3,
     "description": "Detects cyber-bullying on social media",
 
-    "permissions": ["tabs", "storage"],
-    "host_permissions": ["https://twitter.com/*"],
+    "permissions": ["tabs", "storage", "activeTab" ],
+    "host_permissions": ["https://reddit.com/*"],
 
     "icons": {
         "64": "images/icon64.png",
@@ -22,5 +22,5 @@
     },
     "background": {
         "service_worker": "background.js"
-    }
+    } 
 }
