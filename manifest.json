@@ -5,7 +5,6 @@
     "description": "Detects cyber-bullying on social media",
 
     "permissions": ["tabs"],
-    "host_permissions": ["https://twitter.com/*"],
 
     "icons": {
         "64": "images/icon64.png",
@@ -16,5 +15,11 @@
             "64": "images/icon64.png",
             "128": "images/icon128.png"
         }
-    }
+    },
+    "content_scripts": [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["imageblock.js"]
+        }
+    ]
 }
