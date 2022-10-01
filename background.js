@@ -5,13 +5,19 @@ console.log('from background')
 
 //when a tab is activated, check if new tab and update script
 chrome.tabs.onActivated.addListener(tab => {
-    //if(!visited.has(tab.tabId)) {
-        chrome.scripting.executeScript({
-            target: {tabId: tab.tabId},
-            files: ['language_censor.js'],
-        },() => { 
-            console.log('script injected')
-            //visited.add(tab.tabID) 
-        });
-    //}
+    chrome.scripting.executeScript({
+        target: {tabId: tab.id},
+        files: ['language_censor.js'],
+    },() => { 
+        console.log('script injected') 
+    });
 });
+
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    if(changeInfo.status == 'complete') {
+        chrome.scripting.executeScript({
+            files: ['language_censor.js'],
+            target: {tabId: tabId}
+        });
+    }
+})

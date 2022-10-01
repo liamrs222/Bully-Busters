@@ -23,7 +23,12 @@
 
     "permissions": ["activeTab", 
                     "scripting",
+                    "storage",
                     "tabs"
     ],
-    "host_permissions": ["<all_urls>"]
+    "host_permissions": ["<all_urls>"],
+
+    "options_ui": {
+        "page": "options.html"
+    }
 }
