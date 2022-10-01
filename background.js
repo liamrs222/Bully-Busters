@@ -1,12 +1,17 @@
 console.log('from background')
 
-//chrome.tabs.onActivated.addListener(tab => {
-//    console.log(tab)
-//});
+//set of tabs visited
+//const visited = new Set()
 
+//when a tab is activated, check if new tab and update script
 chrome.tabs.onActivated.addListener(tab => {
-    chrome.scripting.executeScript({
-      target: { tabId: tab.Id },
-      files: ['language_censor.js']
-    });
+    //if(!visited.has(tab.tabId)) {
+        chrome.scripting.executeScript({
+            target: {tabId: tab.tabId},
+            files: ['language_censor.js'],
+        },() => { 
+            console.log('script injected')
+            //visited.add(tab.tabID) 
+        });
+    //}
 });
