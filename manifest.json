@@ -4,7 +4,7 @@
     "manifest_version": 3,
     "description": "Detects cyber-bullying on social media",
 
-    "permissions": ["tabs"],
+    "permissions": ["tabs", "storage"],
     "host_permissions": ["https://twitter.com/*"],
 
     "icons": {
@@ -15,6 +15,12 @@
         "default_icon": {
             "64": "images/icon64.png",
             "128": "images/icon128.png"
-        }
+        }, 
+        "default_popup" : "popup.html",
+        "default_title" : "main menu"
+        
+    },
+    "background": {
+        "service_worker": "background.js"
     }
 }
