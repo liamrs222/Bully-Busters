@@ -10,12 +10,17 @@ function replaceWords(blacklistedWords) {
     }
 }
 
-<<<<<<< HEAD
 // if(isToggled) {
 //     replaceText(text);
 // }
-=======
 if (isToggled) {
     replaceWords(blacklistedWords);
 }
->>>>>>> 19ed9613cf48236e4193bcce9e5554068a1295e2
+
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//     if (request.message === 'yo the button turned on') {
+//         chrome.storage.local.get("state", value => {
+//             console.log (value);
+//         })
+//     }
+// })
