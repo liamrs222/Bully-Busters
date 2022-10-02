@@ -5,7 +5,7 @@ function replaceWords(blacklistedWords) {
     for (let i = 0; i < text.length; i++) {
         for (let j = 0; j < blacklistedWords.length; j++) {
             let originalWord = new RegExp(blacklistedWords[j], 'ig');
-            text[i].innerHTML = text[i].innerHTML.replace(originalWord, '<b><i>[REDACTED 🤭]</i></b>');
+            text[i].innerHTML = text[i].innerHTML.replace(originalWord, '<b><i>[REDACTED]</i></b>');
         }
     }
 }
@@ -23,8 +23,4 @@ if (isToggled) {
 //             console.log (value);
 //         })
 //     }
-<<<<<<< HEAD
 // })
-=======
-// })
->>>>>>> ac69828bbdf259e69b4b7f2a49e0df8259ded7ea

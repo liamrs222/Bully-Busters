@@ -13,9 +13,7 @@ function replaceWords(blacklistedWords) {
     }
 }
 
-var isToggled;
-
-var isToggled;
+var isToggled = false;
 
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.getElementById('toggle')
@@ -46,9 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 change = true;
                 replaceWords(blacklistedWords);
             }
-            else{
-                
-            }
         }
     });
     checkbox.addEventListener('click', function () {
@@ -57,17 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("button is on");
         });
         chrome.runtime.sendMessage({message: 'yo the button turned on'});
+        chrome.storage.local.set({ 'enabled': checkbox.checked }, function () {
+            console.log("confirmed");
+        });
     });
 });
 
-<<<<<<< HEAD
-
-
 // chrome.storage.local.set({"state": "true"});
 // chrome.runtime.sendMessage({message: 'yo the button turned on'});
 // console.log("message sent");
-=======
-// chrome.storage.local.set({"state": "true"});
-// chrome.runtime.sendMessage({message: 'yo the button turned on'});
-// console.log("message sent");
->>>>>>> ac69828bbdf259e69b4b7f2a49e0df8259ded7ea
