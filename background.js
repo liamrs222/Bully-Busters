@@ -43,7 +43,7 @@ chrome.tabs.onActivated.addListener(tab => {
 
 //when a tab is refreshed, update script
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    if(changeInfo.status == 'complete' && isToggled) {
+    if (changeInfo.status == 'complete' && isToggled) {
         chrome.scripting.executeScript({
             files: ['language_censor.js'],
             target: {tabId: tabId}
