@@ -1,7 +1,7 @@
 const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a');
 const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker'];
 
-function replaceWords(blacklistedWords) {
+function replaceWords() {
     for (let i = 0; i < text.length; i++) {
         for (let j = 0; j < blacklistedWords.length; j++) {
             let originalWord = new RegExp(blacklistedWords[j], 'ig');
@@ -10,12 +10,4 @@ function replaceWords(blacklistedWords) {
     }
 }
 
-<<<<<<< HEAD
-// if(isToggled) {
-//     replaceText(text);
-// }
-=======
-if (isToggled) {
-    replaceWords(blacklistedWords);
-}
->>>>>>> 19ed9613cf48236e4193bcce9e5554068a1295e2
+replaceWords();

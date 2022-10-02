@@ -13,9 +13,11 @@ function replaceText(text) {
     }
 };
 
+var isToggled;
+
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.getElementById('toggle')
-  
+
     checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
         isToggled = true;
@@ -42,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     checkbox.addEventListener('click', function () {
         console.log(checkbox.checked);
-        chrome.storage.local.set({ 'enabled': checkbox.checked }, function () {
-            console.log("confirmed");
+        chrome.storage.local.set({ 'enabled': !isToggled }, function () {
+            console.log("button is on");
         });
+        chrome.runtime.sendMessage({message: 'yo the button turned on'});
     });
 });
-
