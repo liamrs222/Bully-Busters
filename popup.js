@@ -13,9 +13,11 @@ function replaceWords(blacklistedWords) {
     }
 }
 
+var isToggled;
+
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.getElementById('toggle')
-  
+
     checkbox.addEventListener('change', function () {
     const refresh = toggle.parentNode.querySelector('.refresh')
     if (checkbox.checked) {
@@ -49,11 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     checkbox.addEventListener('click', function () {
         console.log(checkbox.checked);
-        chrome.storage.local.set({ 'enabled': checkbox.checked }, function () {
-            console.log("confirmed");
+        chrome.storage.local.set({ 'enabled': !isToggled }, function () {
+            console.log("button is on");
         });
+        chrome.runtime.sendMessage({message: 'yo the button turned on'});
     });
 });
 
 
 
+// chrome.storage.local.set({"state": "true"});
+// chrome.runtime.sendMessage({message: 'yo the button turned on'});
+// console.log("message sent");

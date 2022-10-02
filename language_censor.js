@@ -16,3 +16,11 @@ function replaceWords(blacklistedWords) {
 if (isToggled) {
     replaceWords(blacklistedWords);
 }
+
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//     if (request.message === 'yo the button turned on') {
+//         chrome.storage.local.get("state", value => {
+//             console.log (value);
+//         })
+//     }
+// })
