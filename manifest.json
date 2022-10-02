@@ -5,7 +5,6 @@
     "description": "Detects cyber-bullying on social media",
 
     "permissions": ["activeTab",
-                    "runtime",
                     "scripting",
                     "storage",
                     "tabs"
