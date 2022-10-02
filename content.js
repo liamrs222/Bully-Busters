@@ -8,4 +8,4 @@ for (let i = 0; i < imgs.length; i++) {
     imgs[i].src = blackScreen;
 }
 */
-alert ("listen here you booger, stop being a d*ckhead and BE NICE")
+//alert ("listen here you booger, stop being a d*ckhead and BE NICE")
