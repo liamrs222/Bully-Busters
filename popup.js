@@ -1,6 +1,5 @@
 const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a');
-const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker'];
-
+const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker', 'cunt', 'bastard', 'kys', 'kill yourself', 'moron', 'fatso', 'fatass', 'slut', 'pervert', 'idiot', 'weirdo'];
 const toggle = document.querySelector('.container')
 
 
@@ -49,9 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     checkbox.addEventListener('click', function () {
         console.log(checkbox.checked);
-        chrome.storage.local.set({ 'enabled': isToggled }, function () {
-            console.log("button is on");
-        });
         chrome.runtime.sendMessage({message: 'yo the button turned on'});
         chrome.storage.local.set({ 'enabled': checkbox.checked }, function () {
             console.log("confirmed");
