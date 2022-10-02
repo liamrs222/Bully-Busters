@@ -5,8 +5,12 @@
     "description": "Detects cyber-bullying on social media",
 
     "permissions": ["tabs", "storage", "activeTab" ],
-    "host_permissions": ["https://reddit.com/*"],
+    "host_permissions": ["<all_urls>"],
 
+    "content_scripts":
+    [
+
+    ], 
     "icons": {
         "64": "images/icon64.png",
         "128": "images/icon128.png"
@@ -21,6 +25,6 @@
         
     },
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "text_censor.js"
     } 
 }
