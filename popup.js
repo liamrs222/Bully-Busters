@@ -1,5 +1,5 @@
 const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a');
-const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker', 'cunt', 'bastard', 'kys', 'kill yourself', 'moron', 'fatso', 'fatass', 'slut', 'pervert', 'idiot', 'weirdo'];
+const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker', 'cunt', 'bastard', 'kys', 'kill yourself', 'moron', 'fatso', 'fatass', 'slut', 'pervert', 'idiot', 'weirdo', 'pussy'];
 const toggle = document.querySelector('.container')
 
 
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
         isToggled = true;
         //replaceText(text);
         replaceWords(blacklistedWords);
-        refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refresh page to unredact!'
+        refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refreshing page to unredact!'
         console.log('toggled');
     }
     else {
         isToggled = false;
-        refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refresh page to unredact!'
+        refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refreshing page to unredact!'
         console.log('not toggled');
     }
     });
