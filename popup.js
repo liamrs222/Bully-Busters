@@ -13,7 +13,7 @@ function replaceText(text) {
     }
 };
 
-var isToggled;
+var isToggled = false;
 
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.getElementById('toggle')
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
     checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
         isToggled = true;
-        replaceText(text);
+        //replaceText(text);
         console.log('toggled');
-    } 
+    }
     else {
         isToggled = false;
         console.log('not toggled');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     checkbox.addEventListener('click', function () {
         console.log(checkbox.checked);
-        chrome.storage.local.set({ 'enabled': !isToggled }, function () {
+        chrome.storage.local.set({ 'enabled': isToggled }, function () {
             console.log("button is on");
         });
         chrome.runtime.sendMessage({message: 'yo the button turned on'});
