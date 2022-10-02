@@ -3,19 +3,25 @@ var isToggled = false;
 
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.getElementById('toggle')
-
     checkbox.addEventListener('change', function () {
-    const refresh = toggle.parentNode.querySelector('.refresh')
-    if (checkbox.checked) {
-        isToggled = true;
-        refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refreshing page to unredact!'
-        console.log('toggled');
-    }
-    else {
-        isToggled = false;
-        refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refreshing page to unredact!'
-        console.log('not toggled');
-    }
+        const refresh = toggle.parentNode.querySelector('.refresh')
+        if (checkbox.checked) {
+            isToggled = true;
+            refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refreshing page to unredact!'
+            console.log('toggled');
+        }
+        else {
+            isToggled = false;
+            refresh.textContent = isToggled ? 'Censoring is currently active' : 'Refreshing page to unredact!'
+            console.log('not toggled');
+        }
+    });
+
+    var addWord = document.getElementById('blacklist')
+    addWord.addEventListener('click', function() {
+        const badWord = getElementById('words')
+        console.log('Value is currently' + badWord)
+        chrome.runtime.sendMessage({message: badWord});
     });
 });
 
