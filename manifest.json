@@ -5,10 +5,10 @@
     "description": "Detects cyber-bullying on social media",
 
     "permissions": ["activeTab",
-                    "runtime",
                     "scripting",
                     "storage",
-                    "tabs"
+                    "tabs",
+                    "nativeMessaging"
     ],
     "host_permissions": ["<all_urls>"],
     
@@ -24,7 +24,6 @@
         "default_popup": "popup.html",
         "default_title": "main menu"
     },
-
     "background": {
         "service_worker" : "background.js"
     }
