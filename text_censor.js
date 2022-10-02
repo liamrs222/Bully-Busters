@@ -5,7 +5,6 @@ replaceWords(blacklistedWords);
 
 function replaceWords(blacklistedWords) {
     for (let i = 0; i < text.length; i++) {
-
         for (let j = 0; j < blacklistedWords.length; j++) {
             let originalWord = new RegExp(blacklistedWords[j], 'ig');
             text[i].innerHTML = text[i].innerHTML.replace(originalWord, '🤭');
