@@ -13,6 +13,6 @@ function replaceText(text) {
     }
 }
 
-if(isToggled) {
-    replaceText(text);
-}
+// if(isToggled) {
+//     replaceText(text);
+// }
