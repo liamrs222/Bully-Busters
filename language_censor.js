@@ -1,18 +1,15 @@
 const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a');
-function replaceText(text) {
+const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore'];
+
+function replaceWords(blacklistedWords) {
     for (let i = 0; i < text.length; i++) {
-        if (text[i].innerHTML.includes('Fuck')) {
-            text[i].innerHTML = text[i].innerHTML.replace('Fuck', 'derek');
-        }
-        else if (text[i].innerHTML.includes('fuck')) {
-            text[i].innerHTML = text[i].innerHTML.replace('fuck', 'derek');
-        }
-        else if (text[i].innerHTML.includes('FUCK')) {
-            text[i].innerHTML = text[i].innerHTML.replace('FUCK', 'derek');
+        for (let j = 0; j < blacklistedWords.length; j++) {
+            let originalWord = new RegExp(blacklistedWords[j], 'ig');
+            text[i].innerHTML = text[i].innerHTML.replace(originalWord, '<b><i>[REDACTED 🤭]</i></b>');
         }
     }
 }
 
 if(isToggled) {
-    replaceText(text);
+    replaceWords(blacklistedWords);
 }
