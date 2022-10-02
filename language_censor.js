@@ -10,12 +10,12 @@ function replaceWords(blacklistedWords) {
     }
 }
 
+replaceWords(blacklistedWords);
+
 // if(isToggled) {
 //     replaceText(text);
 // }
-if (isToggled) {
-    replaceWords(blacklistedWords);
-}
+
 
 // chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 //     if (request.message === 'yo the button turned on') {

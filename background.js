@@ -1,9 +1,9 @@
-var isToggled;
+var isToggled = false;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.message === 'yo the button turned on') {
-        chrome.storage.local.get("enabled", value => {
-            isToggled = value;
+        chrome.storage.local.get("enabled", function (result) {
+            isToggled = result.enabled;
             console.log ("message received baby");
             console.log (isToggled);
         })
