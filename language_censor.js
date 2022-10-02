@@ -1,5 +1,5 @@
 const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a');
-const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore'];
+const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker'];
 
 function replaceWords(blacklistedWords) {
     for (let i = 0; i < text.length; i++) {
