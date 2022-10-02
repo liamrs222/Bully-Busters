@@ -1,12 +1,6 @@
 const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a');
-const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker', 'cunt', 'bastard', 'kys', 'kill yourself', 'moron', 'fatso', 'fatass', 'slut', 'pervert', 'idiot', 'weirdo'];
+const blacklistedWords = ['fuck', 'shit', 'bitch', 'dick', 'whore', 'asshole', 'cocksucker', 'cunt', 'bastard', 'kys', 'kill yourself', 'moron', 'fatso', 'fatass', 'slut', 'pervert', 'idiot', 'weirdo', 'stupid', 'shut up'];
 
-// var badWord = ""
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//     chrome.storage.local.get("bad", function (result) {
-//         badWord = result.bad;
-//     })
-// })
 
 function replaceWords() {
     for (let i = 0; i < text.length; i++) {
