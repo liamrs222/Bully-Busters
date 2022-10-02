@@ -16,7 +16,7 @@
             "matches" : ["<all_urls>"],
             "run_at": "document_idle",
             "all_frames": true,
-            "js" : ["text_censor.js", "read_input_field.js"]
+            "js" : ["text_censor.js"]
         }
     ],
 
