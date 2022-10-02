@@ -10,6 +10,6 @@ function replaceWords(blacklistedWords) {
     }
 }
 
-if(isToggled) {
+if (isToggled) {
     replaceWords(blacklistedWords);
 }
