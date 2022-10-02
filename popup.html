@@ -7,17 +7,22 @@
     <body>
         <div class= "container">
         <h1 style= "text-align: center"> Bully Busters <span id = "total"> </span></h1>
-        <h2> Choose your feature: </h2>
+        <h2><em>Choose your buster: </em></h2>
             <h2> Word/Phrase Censor </h2>
                 <label class="switch">
                     <input type="checkbox", id = "toggle">
                     <span class="slider round"></span>
                 </label>
-            
             <div class="refresh"></div>
+            <h2> Input Words to BlackList </h2>
+            <div class="blockTool">
+                <input type= "text" id="words" placeholder="Enter bad word..." > 
+                <input type="submit" id="blacklist" value="Blacklist word">
+            </div>
         </div>
         <script type="text/javascript" src="popup.js"></script>
-        
+        <script type="text/javascript" src="language_censor.js"> </script>
+
             
     </body>
 </html>
