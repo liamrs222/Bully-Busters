@@ -4,9 +4,14 @@
     "manifest_version": 3,
     "description": "Detects cyber-bullying on social media",
 
-    "permissions": ["tabs", "storage", "activeTab" ],
-    "host_permissions": ["https://reddit.com/*"],
-
+    "permissions": ["activeTab",
+                    "runtime",
+                    "scripting",
+                    "storage",
+                    "tabs"
+    ],
+    "host_permissions": ["<all_urls>"],
+    
     "icons": {
         "64": "images/icon64.png",
         "128": "images/icon128.png"
@@ -15,12 +20,16 @@
         "default_icon": {
             "64": "images/icon64.png",
             "128": "images/icon128.png"
-        }, 
-        "default_popup" : "popup.html",
-        "default_title" : "main menu"
-        
+        },
+        "default_popup": "popup.html",
+        "default_title": "A popup will come here."
     },
+
     "background": {
-        "service_worker": "background.js"
-    } 
+        "service_worker" : "background.js"
+    },
+
+    "options_ui": {
+        "page": "options.html"
+    }
 }
