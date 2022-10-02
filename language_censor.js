@@ -23,4 +23,8 @@ if (isToggled) {
 //             console.log (value);
 //         })
 //     }
+<<<<<<< HEAD
 // })
+=======
+// })
+>>>>>>> ac69828bbdf259e69b4b7f2a49e0df8259ded7ea
