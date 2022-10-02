@@ -13,18 +13,19 @@
     cursor: pointer;
     }
 </style> -->
-<head><title>Bully Busters Options</title></head>
+<head>
+    <title>Bully Busters Options</title>
+</head>
 <body>
-    <div class= "file_holder">
+    <form id = "file_holder">
         <label for = "text">Input .txt file of bad words:</label>
         <input type="file"
             id = "text" name = "text"
             accept = ".txt">
-    </div>
-
+        <input type = "submit" value = "Submit">
+    </form>
     <div id="status"></div>
-    <button class="submit_button">Submit</button>
-
+    
     <script src="options.js"></script>
 </body>
 </html>

@@ -1,9 +1,6 @@
 console.log('from background')
 
-//set of tabs visited
-//const visited = new Set()
-
-//when a tab is activated, check if new tab and update script
+//when a tab is activated, update script
 chrome.tabs.onActivated.addListener(tab => {
     chrome.scripting.executeScript({
         target: {tabId: tab.id},
@@ -13,6 +10,7 @@ chrome.tabs.onActivated.addListener(tab => {
     });
 });
 
+//when a tab is refreshed, update script
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if(changeInfo.status == 'complete') {
         chrome.scripting.executeScript({
@@ -20,4 +18,4 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
             target: {tabId: tabId}
         });
     }
-})
+});

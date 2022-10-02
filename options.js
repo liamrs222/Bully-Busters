@@ -12,21 +12,21 @@ function save_options() {
       }, 750);
     });
   }
-  
-  // Restores select box and checkbox state using the preferences
-  // stored in chrome.storage.
+
   function restore_options() {
     chrome.storage.sync.get({
-
     }, function(items) {
-        createListeners();
+      build
     });
   }
 
+  readTextFile
+
   //add listener for submit button
-  document.querySelector('.submit_button').addEventListener('click', function(){
-    var file = document.querySelector('file_holder').innerHTML;
+  var form = document.getElementById('file_holder')
+  form.addEventListener('submit', function(event) {
+    event.preventDefault() //prevents autosubmitting
+    var file = document.getElementById('text');
   })
-  document.addEventListener('DOMContentLoaded', restore_options);
-  document.getElementById('save').addEventListener('click',
-      save_options);
+
+   document.addEventListener('DOMContentLoaded', restore_options);

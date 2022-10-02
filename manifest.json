@@ -21,7 +21,8 @@
         "service_worker" : "background.js"
     },
 
-    "permissions": ["activeTab", 
+    "permissions": ["activeTab",
+                    "runtime",
                     "scripting",
                     "storage",
                     "tabs"
