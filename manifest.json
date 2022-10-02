@@ -22,14 +22,10 @@
             "128": "images/icon128.png"
         },
         "default_popup": "popup.html",
-        "default_title": "A popup will come here."
+        "default_title": "main menu"
     },
 
     "background": {
         "service_worker" : "background.js"
-    },
-
-    "options_ui": {
-        "page": "options.html"
     }
 }
